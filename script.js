@@ -1,5 +1,5 @@
 const playlist = [
-  {
+    {
     name: "song1",
     title: "Saiyaara",
     artist: "Tanishk & Faheem",
