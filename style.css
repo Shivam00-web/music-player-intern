@@ -1,18 +1,163 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.navbar{
-
-    width: 100%;
-    height:
-    background-color: rgba(0, 0, 0, 0.158);
+body {
+  background: #121212;
+  color: #fff;
+  overflow: hidden;
 }
 
-.menubtn{
-    
-    width: 5px;
-    background-color: aqua;
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
 
+.sidebar {
+  width: 250px;
+  background: #1e1e1e;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.menu li {
+  padding: 10px;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: #4caf50;
+  color: white;
+}
+
+.sidebar-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.sidebar-playlist {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.sidebar-playlist li {
+  font-size: 14px;
+  padding: 6px 0;
+  cursor: pointer;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+.sidebar-playlist li:hover {
+  color: #fff;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.playlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.song-card {
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.song-card:hover {
+  background: #333;
+}
+
+.song-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.song-card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.song-card p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid #333;
+}
+
+.now-playing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.now-playing img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.controls button {
+  font-size: 20px;
+  margin: 0 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.progress-volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 400px;
+}
+
+input[type="range"] {
+  cursor: pointer;
+  accent-color: #4caf50;
 }
